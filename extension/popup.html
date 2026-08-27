@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 360px;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #1f1f1f;
+    }
+
+    /* ================= HEADER ================= */
+
+    .header {
+      height: 64px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #e5e5e5;
+      background: #ffffff;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 4px;
+    }
+    .brand-mark img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+    .brand-name {
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      color: #222222;
+    }
+
+    /* ================= CONTENT ================= */
+
+    .content {
+      padding: 20px 18px 16px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      color: #666666;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 7px;
+    }
+
+    .title {
+      font-size: 19px;
+      font-weight: 600;
+      color: #202020;
+      margin-bottom: 7px;
+    }
+
+    .description {
+      font-size: 12px;
+      line-height: 1.55;
+      color: #666666;
+      margin-bottom: 18px;
+    }
+
+    /* ================= BUTTON ================= */
+
+    button {
+      width: 100%;
+      height: 38px;
+      border: 0;
+      border-radius: 3px;
+      background: #1f4b99;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    button:hover {
+      background: #173b7a;
+    }
+
+    button:active {
+      background: #123266;
+    }
+
+    /* ================= STATUS ================= */
+
+    #status {
+      min-height: 20px;
+      margin-top: 10px;
+      font-size: 11px;
+      color: #666666;
+    }
+
+    /* ================= RESULTS ================= */
+
+    #results {
+      max-height: 300px;
+      overflow-y: auto;
+      margin-top: 12px;
+    }
+
+    #results::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    #results::-webkit-scrollbar-thumb {
+      background: #cccccc;
+    }
+
+    .clause {
+      padding: 12px 12px 12px 14px;
+      margin-bottom: 8px;
+      border: 1px solid #e1e1e1;
+      border-left: 3px solid #b5b5b5;
+      background: #ffffff;
+    }
+
+    .clause.high {
+      border-left-color: #c62828;
+    }
+
+    .clause.medium {
+      border-left-color: #d97706;
+    }
+
+    .clause.low {
+      border-left-color: #2e7d32;
+    }
+
+    /* ================= SEVERITY ================= */
+
+    .severity {
+      display: inline-block;
+      margin-bottom: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .severity.high {
+      color: #b71c1c;
+    }
+
+    .severity.medium {
+      color: #a65b00;
+    }
+
+    .severity.low {
+      color: #267034;
+    }
+
+    /* ================= FOOTER ================= */
+
+    .footer {
+      height: 34px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid #eeeeee;
+      color: #888888;
+      font-size: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="brand">
+      <div class="brand-mark"><img src="logo.png" width="auto" height="auto" alt=""></div>
+      <div class="brand-name">ClauseGuard</div>
+    </div>
+  </header>
+
+
+  <main class="content">
+
+    <div class="eyebrow">Contract Intelligence</div>
+
+    <div class="title">
+      Analyze this page
+    </div>
+
+    <div class="description">
+      Identify potentially risky clauses, obligations, and terms that may require attention.
+    </div>
+
+    <button id="analyzeBtn">
+      Analyze page
+    </button>
+
+    <div id="status"></div>
+
+    <div id="results"></div>
+
+  </main>
+
+
+  <footer class="footer">
+    ClauseGuard
+  </footer>
+
+
+  <script src="popup.js"></script>
+
+</body>
+</html>

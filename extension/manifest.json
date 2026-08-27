@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "ClauseGuard",
+  "version": "1.0",
+  "description": "Detects and flags risky clauses in legal text on webpages",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://127.0.0.1:8000/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
